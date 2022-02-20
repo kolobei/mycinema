@@ -1,0 +1,8 @@
+main {
+    min-height: 488px;
+    height: auto;
+    margin: 3rem auto 0 auto;
+    background-image: url("../app/images/hall.jpg");
+    background-position: center;
+    background-size: cover;
+  }

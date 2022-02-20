@@ -1,7 +1,29 @@
-main {
-  min-height: 488px;
-  height: auto;
-  margin: 3rem auto;
+#contain {
+  padding-bottom: 1.2rem;
+}
+
+#heading {
+  margin: 0 auto;
+  max-width: 85%;
+}
+
+#heading h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 500;
+  color: rgb(228, 163, 44);
+  text-decoration: underline;
+}
+
+#div-t {
+  margin: 0 auto;
+  max-width: 85%;
+}
+
+table {
+  margin: 0 auto;
+  width: 100%;
+  background-color: rgb(235, 211, 166);
 }
 
 th {
@@ -17,7 +39,16 @@ td {
   max-width: 450px !important;
 }
 
-table {
-  width: 100%;
-  background-color: rgb(219, 160, 139);
+.see-details {
+  color: rgb(78, 76, 76);
+}
+
+.see-details:hover {
+  color: rgb(54, 54, 54);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+mat-paginator {
+  background-color: rgb(235, 211, 166) !important;
 }

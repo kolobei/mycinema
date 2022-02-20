@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { UnauthorizedComponent } from './components/unauthorized/unauthorized.component';
@@ -16,6 +17,10 @@ const routes: Routes = [
     component: MoviesComponent,
     resolve: { result: MoviesListResolverService },
     runGuardsAndResolvers: 'always',
+  },
+  {
+    path: 'movie/:i',
+    component: MovieDetailsComponent,
   },
   {
     path: '404',

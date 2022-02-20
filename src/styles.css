@@ -5,8 +5,10 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: rgb(44, 41, 38);
+  background-color: white;
 }
+
+
 
 a {
   text-decoration: none;
