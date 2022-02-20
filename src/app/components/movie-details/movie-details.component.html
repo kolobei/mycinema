@@ -1,1 +1,26 @@
-<p>movie-details works!</p>
+<div class="container container-sm pt-5">
+  <div id="contain" class="row">
+    <div id="heading" class="col-md-12">
+      <h2>{{ selectedMovie.title }}</h2>
+    </div>
+    <div *ngIf="selectedMovie !== null" id="movie-presenter" class="row col-md-12">
+        <div id="movie-img" class="col-3">
+            <img [src]="sourceForPic" alt="poster">
+        </div>
+        <div id="movie-details" class="col-8">
+            <div class="col-md-12">
+                {{ selectedMovie.overview }}
+            </div>
+            <div class="col-md-12">
+                <span>Release Date:</span> {{ selectedMovie.release_date }}
+            </div>
+            <div class="col-md-12">
+                <span>Rating:</span> {{ selectedMovie.vote_average }}
+            </div>
+            <div class="col-md-12">
+                {{ selectedMovie.vote_count }} reviews
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

@@ -7,6 +7,7 @@ import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatPaginator } from '@angular/material/paginator';
 import { SharedMovieService } from 'src/app/services/shared-movie.service';
+import { mixinHasStickyInput } from '@angular/cdk/table';
 
 @Component({
   selector: 'app-movies',
@@ -31,17 +32,15 @@ export class MoviesComponent implements OnInit {
         if (data.result.error == null) {
           this.movies$.next(data.result.result.results);
           this.movies = this.movies$.value;
-          // console.debug("ERRRRRRR")
         } else {
           this.movies$.next([]);
           this.movies = [];
-          console.debug('MMMMMMMMMMM');
         }
       }
     );
-    this.movies.forEach((m) => {
-      console.debug(m);
-    });
+    // this.movies.forEach((m) => {
+    //   console.debug(m);
+    // });
     this.dataSource = new MatTableDataSource(this.movies);
   }
 
@@ -52,8 +51,15 @@ export class MoviesComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
   }
 
-  seeMovieDetails(index: number) {
-    this.sharedService.getMovie(this.movies[index]);
-    this.router.navigateByUrl('/movie/' + (index + 1));
+  seeMovieDetails(id: number) {
+    let selectedMovie = [];
+    selectedMovie = this.movies.filter((m) => 
+      m.id === id
+    )
+    selectedMovie.forEach((d) => {
+      console.debug(d);
+    })
+    this.sharedService.getMovie(selectedMovie[0]);
+    this.router.navigateByUrl('/movie/' + (id));
   }
 }

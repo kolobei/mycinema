@@ -1,0 +1,42 @@
+#contain {
+  padding-bottom: 1.2rem;
+}
+
+#heading {
+  margin: 0 auto;
+  max-width: 85%;
+}
+
+#heading h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 500;
+  color: rgb(228, 163, 44);
+  text-decoration: underline;
+}
+
+#movie-presenter {
+  padding: 1rem 5rem;
+  margin-top: 1rem;
+}
+
+#movie-img img {
+  height: 20rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+#movie-details {
+  padding: 0;
+  background-color: transparent;
+}
+
+#movie-details div {
+  padding: 0.2rem 0;
+  color: rgb(228, 163, 44);
+}
+
+#movie-details div span {
+    color: rgb(209, 150, 40);
+    text-decoration: underline;
+  }

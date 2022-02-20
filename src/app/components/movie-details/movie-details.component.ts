@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from 'src/app/models/movie';
+import { SharedMovieService } from 'src/app/services/shared-movie.service';
 
 @Component({
   selector: 'app-movie-details',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieDetailsComponent implements OnInit {
 
-  constructor() { }
+  selectedMovie: Movie;
+  sourceForPic: string;
+
+  constructor(
+    private sharedService: SharedMovieService
+  ) { }
 
   ngOnInit(): void {
+    this.selectedMovie = null;
+    this.selectedMovie = this.sharedService.getValue();
+    if (this.selectedMovie.title != null) {
+      this.sourceForPic = "https://image.tmdb.org/t/p/w500/" + this.selectedMovie.poster_path;
+    }
   }
 
 }

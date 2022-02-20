@@ -22,7 +22,7 @@
         <ng-container matColumnDef="options">
           <th mat-header-cell *matHeaderCellDef class="text-center"></th>
           <td mat-cell class="text-center" *matCellDef="let movie; let i = index">
-            <a class="see-details" (click)="seeMovieDetails(i)">Details...</a>
+            <a class="see-details" (click)="seeMovieDetails(movie.id)">Details...</a>
           </td>
         </ng-container>
 
