@@ -12,7 +12,7 @@
                 {{ selectedMovie.overview }}
             </div>
             <div class="col-md-12">
-                <span>Release Date:</span> {{ selectedMovie.release_date }}
+                <span>Release Date:</span> {{ selectedMovie.release_date | date: 'MMM d, y'}}
             </div>
             <div class="col-md-12">
                 <span>Rating:</span> {{ selectedMovie.vote_average }}
