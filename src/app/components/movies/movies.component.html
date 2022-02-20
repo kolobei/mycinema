@@ -1,0 +1,30 @@
+<main>
+  <div class="container container-sm pt-5">
+    <div class="row">
+      <div class="col-md-12 pt-3 pb-1 pr-1 pl-0" id="div-t">
+        <table mat-table [dataSource]="dataSource">
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef class="text-center">
+              Titlos
+            </th>
+            <td mat-cell class="text-center" *matCellDef="let movie">
+              {{ movie.title }}
+            </td>
+          </ng-container>
+
+          <tr
+            mat-header-row
+            *matHeaderRowDef="displayedColumns; sticky: true"
+          ></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+
+        <mat-paginator
+          [pageSizeOptions]="[5, 10]"
+          showFirstLastButtons
+          aria-label="Select page of periodic elements"
+        ></mat-paginator>
+      </div>
+    </div>
+  </div>
+</main>
