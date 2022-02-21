@@ -1,13 +1,11 @@
 import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { Movie } from 'src/app/models/movie';
-import { HttpClient } from '@angular/common/http';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatPaginator } from '@angular/material/paginator';
 import { SharedMovieService } from 'src/app/services/shared-movie.service';
-import { mixinHasStickyInput } from '@angular/cdk/table';
 import { SubscriptionsContainer } from 'src/app/helpers/subscriptions-container';
 
 @Component({
@@ -41,9 +39,7 @@ export class MoviesComponent implements OnInit, AfterViewInit, OnDestroy {
         }
       }
     );
-    // this.movies.forEach((m) => {
-    //   console.debug(m);
-    // });
+    
     this.dataSource = new MatTableDataSource(this.movies);
   }
 
