@@ -2,6 +2,24 @@
   padding-bottom: 1.2rem;
 }
 
+.movie-title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.movie-title button {
+  min-width: 80px;
+  border-radius: 18px;
+  padding: 5px;
+}
+
+.movie-details-container {
+  background-color: rgba(17, 17, 17, 0.856);
+  border-radius: 18px;
+  padding-top: 10px;
+}
+
 #heading {
   margin: 0 auto;
   max-width: 85%;
@@ -20,9 +38,13 @@
   margin-top: 0.2rem;
 }
 
+#movie-img {
+  display: flex;
+  justify-content: center;
+}
+
 #movie-img img {
-  height: 20rem;
-  width: 100%;
+  height: 300px;
   object-fit: cover;
 }
 
@@ -37,6 +59,12 @@
 }
 
 #movie-details div span {
-    color: rgb(209, 150, 40);
-    text-decoration: underline;
+  color: rgb(209, 150, 40);
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 995px) {
+  #movie-img {
+    margin-bottom: 15px;
   }
+}

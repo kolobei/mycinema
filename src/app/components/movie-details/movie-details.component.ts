@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Movie } from 'src/app/models/movie';
 import { SharedMovieService } from 'src/app/services/shared-movie.service';
 
@@ -13,6 +14,7 @@ export class MovieDetailsComponent implements OnInit {
   sourceForPic: string;
 
   constructor(
+    private router: Router,
     private sharedService: SharedMovieService
   ) { }
 
@@ -22,6 +24,10 @@ export class MovieDetailsComponent implements OnInit {
     if (this.selectedMovie.title != null) {
       this.sourceForPic = "https://image.tmdb.org/t/p/w500/" + this.selectedMovie.poster_path;
     }
+  }
+
+  goBack() {
+    this.router.navigateByUrl('/');
   }
 
 }

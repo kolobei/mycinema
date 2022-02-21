@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  background-color: #111 !important;
 }
 body {
   margin: 0;
@@ -8,7 +9,9 @@ body {
   background-color: white;
 }
 
-
+.main-wrapper {
+  padding: 15px;
+}
 
 a {
   text-decoration: none;
